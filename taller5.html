@@ -1,0 +1,79 @@
+¿Por qué los enlaces son verdes y no rojos?
+Los enlaces aparecen verdes porque en el CSS del ejemplo existe una regla que 
+define el color de las etiquetas <a> usando la propiedad color: green;. 
+En CSS, los estilos definidos directamente para un elemento tienen prioridad sobre los 
+colores por defecto del navegador
+
+¿Cómo hacer que los enlaces sean rojos?
+Se debe modificar la propiedad color en el selector de los enlaces.
+ejemplo
+a {
+    color: red;
+}
+
+
+3. Rehacer el HTML usando <div> en lugar de <ul> y <li>. ¿Qué pasa?
+
+Al reemplazar las etiquetas <ul> y <li> por <div>, la estructura de lista desaparece.
+Esto ocurre porque las etiquetas <ul> y <li> tienen estilos y comportamiento semántico
+ propios de una lista HTML, mientras que <div> es un contenedor genérico sin formato especial.
+
+Por eso:
+
+Se pierden las viñetas o numeración.
+Algunos estilos CSS pueden dejar de funcionar si estaban dirigidos a ul o li.
+El diseño puede cambiar completamente.
+
+<ul>
+   <li><a href="#">Inicio</a></li>
+   <li><a href="#">Contacto</a></li>
+</ul>
+
+<div>
+   <div><a href="#">Inicio</a></div>
+   <div><a href="#">Contacto</a></div>
+</div>
+
+4.Comentar el CSS que no se puede tocar y reescribir el CSS usando una clase 
+por selector para que se vea igual
+
+/* CSS ORIGINAL QUE NO SE PUEDE TOCAR */
+
+/*
+ul {
+   list-style: none;
+}
+
+li {
+   display: inline-block;
+}
+
+a {
+   color: green;
+   text-decoration: none;
+}
+
+/* NUEVO CSS USANDO CLASES */
+
+.lista {
+   list-style: none;
+}
+
+.item {
+   display: inline-block;
+}
+
+.enlace {
+   color: green;
+   text-decoration: none;
+}
+
+<ul class="lista">
+   <li class="item">
+      <a class="enlace" href="#">Inicio</a>
+   </li>
+
+   <li class="item">
+      <a class="enlace" href="#">Contacto</a>
+   </li>
+</ul>
